@@ -20,7 +20,15 @@ Added ViewMore functionality by using lyconic fullcalendar.viewmore (https://git
 Just call `limitEvents` with either of the following options :
 
         $('#calendar').limitEvents(2);
+               or
+        $('#calendar').limitEvents({
+                maxEvents : 2
+        });       
         
 OR
 
         $('#calendar').limitEvents('height');
+                        or
+        $('#calendar').limitEvents({
+                height  : true
+        });
