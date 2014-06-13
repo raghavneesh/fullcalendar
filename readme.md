@@ -14,3 +14,21 @@ For contributors:
 - [General coding guidelines](https://github.com/arshaw/fullcalendar/wiki/Contributing-Code)
 - [Contributing features](https://github.com/arshaw/fullcalendar/wiki/Contributing-Features)
 - [Contributing bugfixes](https://github.com/arshaw/fullcalendar/wiki/Contributing-Bugfixes)
+
+Added ViewMore functionality by using lyconic fullcalendar.viewmore (https://github.com/lyconic/fullcalendar/tree/view-more).
+
+Just call `limitEvents` with either of the following options :
+
+        $('#calendar').limitEvents(2);
+               or
+        $('#calendar').limitEvents({
+                maxEvents : 2
+        });       
+        
+OR
+
+        $('#calendar').limitEvents('height');
+                        or
+        $('#calendar').limitEvents({
+                height  : true
+        });
