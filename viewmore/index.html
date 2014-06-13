@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='../dist/fullcalendar.css' rel='stylesheet' />
+        <link href='../dist/fullcalendar.print.css' rel='stylesheet' media='print' />
+        
+        <link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.min.css">
+        <link rel="stylesheet" href="css/formbubble.css">
+        <link rel="stylesheet" href="css/viewmore.css">
+        <style>
+            #calendar{
+                max-width   : 500px;
+                margin      : 0 auto;
+            }
+            .form-bubble{
+                min-width   : 200px;
+                max-width   : 200px;
+            }
+            .form-bubble .fc-event{
+                width   : 100% !important;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="calendar"></div>
+        
+        
+        <script src='js/jquery.js'></script>
+        <script src='js/jquery-ui-1.10.4.custom.min.js'></script>
+        <script src='js/moment.min.js'></script>
+        <script src='../dist/fullcalendar.js'></script>
+        <script src="js/date.js"></script>
+        <script src="js/jquery.formbubble.js"></script>
+        <script src="js/fullcalendar.viewmore.js"></script>
+        <script>
+        $(document).ready(function(){
+                $('#calendar').fullCalendar({
+                    header  : {
+                        left    : 'title',
+                        right   : 'prev,next prevYear,nextYear'
+                    },
+                    editable	: false,
+                    selectable: false,
+                    selectHelper: false,
+                    incDayRowHeight: false,
+                    events: [
+                       {
+                            title  : 'Event',
+                            start  : '2014-06-10'
+                        },
+                        {
+                            title  : 'Some really long name for the event and long and long and long',
+                            start  : '2014-06-10'
+                        },
+                         {
+                            title  : 'Event',
+                            start  : '2014-06-10'
+                        },
+                       
+                        {
+                            title  : 'event2',
+                            start  : '2014-06-22',
+                            end    : '2014-06-27'
+                        },
+                        {
+                            title  : 'event3',
+                            start  : '2014-06-23',
+                            end    : '2014-06-25'
+                        },
+                        {
+                            title  : 'event4',
+                            start  : '2014-06-24'
+                        }
+                    ]
+                       
+                });  
+            //By limiting number
+            //$('#calendar').limitEvents(2);
+            $('#calendar').limitEvents('height');
+        });
+        </script>
+    </body>
+</html>
